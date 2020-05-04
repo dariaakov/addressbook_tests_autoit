@@ -14,7 +14,7 @@ namespace addressbook_tests_autoit
 
             GroupData newGroup = new GroupData()
             {
-                Name = "test"
+                Name = "Test"
             };
 
             app.Groups.Add(newGroup);
