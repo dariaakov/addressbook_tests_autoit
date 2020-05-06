@@ -57,6 +57,21 @@ namespace addressbook_tests_autoit
 
         }
 
+        public void GroupIsPresent()
+
+        {
+            OpenGroupsDialog();
+            string nameGroups = aux.ControlTreeView(GROUPWINTITLE, "", "WindowsForms10.SysTreeView32.app.0.2c908d51", "GetText", "#0|#1", "");
+            if (nameGroups == "")
+            {
+                Add(new GroupData()
+                {
+                    Name = "DeletGroup"
+                });
+            }
+            return;
+        }
+
         private void CloseGroupsDialog()
         {
             aux.ControlClick(GROUPWINTITLE, "", "WindowsForms10.BUTTON.app.0.2c908d54");

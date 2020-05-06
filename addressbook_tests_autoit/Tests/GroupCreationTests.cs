@@ -30,6 +30,8 @@ namespace addressbook_tests_autoit
         [Test]
         public void TestGroupDeletion()
         {
+            app.Groups.GroupIsPresent();
+
             List<GroupData> oldGroups = app.Groups.GetGroupList();
 
             app.Groups.Delete(0);
